@@ -14,9 +14,4 @@ A professional, responsive corporate website built for an IT services company. T
 * **Interactive Elements:** 3D hero backgrounds, hover-zoom project cards, and dropdown navigation.
 * **Multi-Page Layout:** Includes Home, About, Careers, and 5 specific Industry vertical pages.
 
-## 📦 How to Run
-1.  Clone the repository:
-    ```bash
-    git clone [https://github.com/your-username/zenvexa-tech-website.git](https://github.com/your-username/zenvexa-tech-website.git)
-    ```
-2.  Open `index.html` in your browser.
+
