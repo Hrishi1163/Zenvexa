@@ -1,0 +1,162 @@
+/* =======================
+   CAREERS PAGE STYLES (Fixed Backgrounds)
+======================= */
+
+/* 1. Global Dark Background for Careers Page */
+body {
+  background-color: var(--bg-darkest); /* Ensures the whole page is the same dark navy */
+}
+
+/* 2. Careers Hero Banner */
+.page-hero {
+  height: 60vh;
+  position: relative;
+  /* Dark overlay + Image */
+  background: linear-gradient(rgba(5, 11, 26, 0.7), rgba(5, 11, 26, 0.9)), url('../images/about-img.avif'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+/* Adds a fade-out effect at the bottom of the hero to blend with the next section */
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--bg-darkest));
+  z-index: 1;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2; /* Sits above the fade effect */
+  max-width: 900px;
+  color: white;
+}
+
+.page-hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #00b4ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.page-hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.page-hero-content p {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+/* 3. Career Details Grid */
+.career-details {
+  padding: 80px 5%;
+  /* Removed specific background color to use body's seamless dark color */
+  background-color: transparent; 
+  position: relative;
+  z-index: 2;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.career-card {
+  background-color: var(--secondary-color); /* Dark Navy Card */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); /* Stronger shadow */
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.career-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color); /* Cyan Title */
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.career-list {
+  list-style: none;
+}
+
+.career-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #e2e8f0; /* Light Grey text */
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.career-list li i {
+  color: var(--primary-color); /* Cyan Checkmarks */
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+/* 4. Bottom CTA Section */
+.career-cta-section {
+  padding: 0 5% 80px;
+  background-color: transparent; /* Seamless */
+}
+
+.cta-box {
+  /* Gradient Border/Background */
+  background: linear-gradient(135deg, rgba(0, 51, 102, 0.6) 0%, rgba(0, 180, 255, 0.1) 100%);
+  padding: 60px 40px;
+  text-align: center;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 20px rgba(0, 180, 255, 0.1);
+}
+
+.cta-box p {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.mail-label {
+  font-weight: 600;
+  color: var(--primary-color) !important;
+  margin-bottom: 10px !important;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .career-grid {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+  .page-hero-content h1 { font-size: 2.5rem; }
+  .page-hero-content h2 { font-size: 1.5rem; }
+  .page-hero { height: auto; padding-bottom: 60px; }
+}

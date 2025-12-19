@@ -1,0 +1,280 @@
+/* =======================
+   CSS For All Subpages of industries
+======================= */
+
+/* 1. Global Page Settings (Dark Mode) */
+:root {
+  --primary-color: #00b4ff; /* Cyan */
+  --secondary-color: #003366; /* Deep Navy */
+  --bg-darkest: #050b1a; /* Almost Black */
+  --text-light: #ffffff;
+  --text-grey: #a0aec0;
+  --logo-pink: #E57E87;
+}
+
+body {
+  background-color: var(--bg-darkest);
+  color: var(--text-light);
+}
+
+/* 2. Hero Section */
+.ind-hero {
+  position: relative;
+  height: 60vh;
+  /* Darker Overlay to match theme + BPO Image */
+  background: linear-gradient(rgba(5, 11, 26, 0.85), rgba(0, 51, 102, 0.9));
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-top: -80px; 
+  padding-top: 80px;
+}
+
+/* Fade out effect at bottom of hero */
+.ind-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to bottom, transparent, var(--bg-darkest));
+  z-index: 1;
+}
+
+.ind-hero-content {
+  max-width: 900px;
+  color: white;
+  z-index: 2;
+}
+
+.ind-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  /* Cyan Gradient Text */
+  background: linear-gradient(90deg, #00b4ff, #00ffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ind-hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+/* Cyan Button (Matches Home Page) */
+.btn-white {
+  display: inline-block;
+  background: linear-gradient(90deg, #00b4ff, #0077cc);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 180, 255, 0.3);
+}
+
+.btn-white:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 180, 255, 0.5);
+}
+
+/* 3. Layout Containers & Spacing */
+.approach-section, 
+.tech-services-section, 
+.why-choose-section {
+  padding: 80px 5%;
+  position: relative;
+  z-index: 2;
+  background-color: transparent; /* Shared dark background */
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.intro-text p {
+  color: var(--text-grey);
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Cyan accent line below title */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+}
+
+/* 4. Grid System */
+.grid-3-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* 5. Approach Cards (Dark Navy) */
+.info-card {
+  background-color: var(--secondary-color); /* Deep Navy */
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--primary-color); /* Cyan Glow */
+  box-shadow: 0 15px 30px rgba(0, 180, 255, 0.15);
+}
+
+.card-icon {
+  font-size: 28px;
+  color: var(--primary-color);
+  width: 60px;
+  height: 60px;
+  background-color: rgba(0, 180, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: var(--text-grey);
+  line-height: 1.6;
+}
+
+/* 6. BPO Services Cards */
+.text-card {
+  background-color: var(--secondary-color);
+  padding: 40px 30px;
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.text-card:hover {
+  transform: translateY(-5px);
+  background-color: #002244;
+}
+
+.text-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: white;
+  font-weight: 700;
+}
+
+.text-card p {
+  font-size: 1rem;
+  color: var(--text-grey);
+  line-height: 1.6;
+}
+
+/* 7. Why Choose Us Cards */
+.value-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: var(--secondary-color);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  border-color: var(--logo-pink); /* Pink Accent */
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 24px;
+  color: var(--logo-pink); /* Pink Icon */
+  background-color: rgba(229, 126, 135, 0.1);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.value-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 700;
+}
+
+.value-content p {
+  font-size: 0.95rem;
+  color: var(--text-grey);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid-3-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+  .ind-hero {
+    height: auto;
+    padding-bottom: 60px;
+  }
+  .ind-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
