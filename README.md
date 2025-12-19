@@ -2,9 +2,6 @@
 
 A professional, responsive corporate website built for an IT services company. This project features a modern "Dark Hybrid" UI theme, interactive 3D backgrounds, and seamless page transitions.
 
-## 🚀 Live Demo
-[Link to your published site goes here]
-
 ## 🛠️ Tech Stack
 * **Frontend:** HTML5, CSS3 (Custom Variables, Grid/Flexbox), JavaScript (ES6)
 * **Animations:** AOS (Animate On Scroll), Vanta.js (3D WebGL Backgrounds)
